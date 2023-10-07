@@ -20,4 +20,17 @@
     margin: 0 auto;
     overflow: auto;
   }
+
+  nav {
+    display: flex;
+    ul {
+      display: flex;
+      list-style-type: none;
+
+      li {
+        padding-left: 20px;
+        font-size: 1.1em;
+      }
+    }
+  }
   
