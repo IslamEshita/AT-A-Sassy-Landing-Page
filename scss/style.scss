@@ -1,5 +1,5 @@
-@import "utilities";
-@import "config";
+@import "_utilities";
+@import "_config";
 
 * {
   box-sizing: border-box;
@@ -8,8 +8,6 @@
 }
 
 body {
-  color: white;
-  background-color: $primary-color;
   font-family: $font-stack;
   line-height: 1;
 }

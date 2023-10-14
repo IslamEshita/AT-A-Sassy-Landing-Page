@@ -1,11 +1,11 @@
-@import "utilities";
-@import "config";
+@import "_utilities";
+@import "_config";
 
 %btn {
   display: inline-block;
   border-radius: 5px; 
   padding: 8px 20px;
-  margin: 3px;
+  margin: 25px;
 
   &:hover {
     transform: scale(.80);
