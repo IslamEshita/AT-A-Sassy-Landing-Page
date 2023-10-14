@@ -1,5 +1,6 @@
-@import "_utilities";
-@import "_config";
+@import "utilities";
+@import "config";
+@import "btnConfig";
 
 * {
   box-sizing: border-box;
@@ -8,6 +9,7 @@
 }
 
 body {
+  background-color: $light-color;
   font-family: $font-stack;
   line-height: 1;
 }
@@ -21,55 +23,45 @@ a {
 }
 
 .hero {
-  &-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
+  @include set-bg($primary-color);
+  height: 600px;
+  // This is where the bulk of the SCSS styling needs to be done
 
+  // Take a look at the other files we've built already. How can they be useful here?
+
+  // Also, take time to review the features of SCSS we've already covered:
+  // 1. $variables
+  // 2. nesting (dont forget about the ampersand (&) parent selector!)
+  // 3. At-Rules
+
+  nav {
+    display: flex;
+    margin-top: 5px;
+    ul {
+      display: flex;
+      margin-left: 1em;      
+      list-style-type: none;
+
+      li {
+        padding: 1em;
+      }
+
+      a {
+        color: text-color-picker($primary-color);        
+        }
+      }
+
+      a:hover {
+        color:$secondary-color;
+    }
+  }
+
+  &-content {
+    margin-top: 20px;
+    display:flex;
     img {
       width: 50%;
-    }
-
-    h1 {
-      font-size: 50px;
-      line-height: 1.2;
-    }
-
-    .btn-primary {
-      color: $secondary-color;
-      background-color: darkblue;
-      font-size: 1.1em;
-      margin: 5px;
-      padding:5px;
-    }
-
-    .btn-secondary {
-      color: $primary-color;
-      background-color: $secondary-color;
-      font-size: 1.1em;
-      margin: 5px;
-      padding:5px;
-    }
-  }
-}
-
-nav {
-  color: white;
-  margin-top:30px;
-  display: flex;
-  ul {
-    display: flex;
-    list-style-type: none;
-
-    li {
-      margin-left: 20px;
-      font-size: 1.1em;
-    }
-  }
-
-  a {
-    color: white;
+    }  
   }
 }
 
